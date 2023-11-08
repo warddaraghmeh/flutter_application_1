@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 
@@ -58,107 +58,48 @@ class FacebookApp extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 20,
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                margin: EdgeInsets.only(bottom: 22),
+        body: Container(
+          child: Row(children: [
+            Expanded(
+              flex: 3,
+              child: Container(
                 alignment: Alignment.center,
-                // ignore: sort_child_properties_last
                 child: Text(
-                  "C4a.shop",
-                  style: TextStyle(color: Colors.white, fontSize: 44),
+                  "ward",
+                  style: TextStyle(
+                    fontSize: 27,
+                  ),
                 ),
-                height: 322,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.blueGrey,
-                ),
+                color: Colors.amber[200],
+                width: 122,
+                height: 100,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Container(
-                      alignment: Alignment.center,
-                      // ignore: sort_child_properties_last
-                      child: Text(
-                        "ward",
-                        style: TextStyle(color: Colors.white, fontSize: 27),
-                      ),
-                      height: 100,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.blueGrey,
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 23),
-                      alignment: Alignment.center,
-                      // ignore: sort_child_properties_last
-                      child: Text(
-                        "Hakam",
-                        style: TextStyle(color: Colors.white, fontSize: 27),
-                      ),
-                      height: 100,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.blueGrey,
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 23),
-                      alignment: Alignment.center,
-                      // ignore: sort_child_properties_last
-                      child: Text(
-                        "Hakam",
-                        style: TextStyle(color: Colors.white, fontSize: 27),
-                      ),
-                      height: 100,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.blueGrey,
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 23),
-                      alignment: Alignment.center,
-                      // ignore: sort_child_properties_last
-                      child: Text(
-                        "Hakam",
-                        style: TextStyle(color: Colors.white, fontSize: 27),
-                      ),
-                      height: 100,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.blueGrey,
-                      ),
-                    ),
-                  ],
-                ),
+            ),
+            Container(
+              alignment: Alignment.center,
+              child: Text(
+                "ward",
+                style: TextStyle(fontSize: 27, color: Colors.white),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 22),
+              color: Colors.blue[300],
+              width: 122,
+              height: 100,
+            ),
+            Expanded(
+              child: Container(
                 alignment: Alignment.center,
-                // ignore: sort_child_properties_last
                 child: Text(
-                  "C4a.shop",
-                  style: TextStyle(color: Colors.white, fontSize: 44),
+                  "ward",
+                  style: TextStyle(fontSize: 27, color: Colors.white),
                 ),
-                height: 322,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.blueGrey,
-                ),
+                color: Colors.red[300],
+                width: 122,
+                height: 100,
               ),
-            ],
-          ),
+            ),
+          ]),
+          color: Colors.blueGrey,
+          height: 300,
         ));
   }
 }
